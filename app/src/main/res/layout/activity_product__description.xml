@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.toranado.bestafe.Product_Description">
+
+        <include
+            android:id="@+id/toolbar_product_description"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></include>
+
+        <include
+            android:id="@+id/view_product_description"
+            layout="@layout/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_product_description">
+
+        </include>
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_relative">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_relative">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:repeatCount="infinite"
+                android:scaleType="matrix"
+                android:src="@android:drawable/alert_dark_frame">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imgProduct"
+                android:layout_margin="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text=""
+                android:textAppearance="@android:style/TextAppearance.Small">
+
+            </TextView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

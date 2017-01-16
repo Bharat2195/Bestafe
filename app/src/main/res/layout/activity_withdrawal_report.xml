@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolbar_withdrawal"
+        layout="@layout/toolbar_login_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </include>
+
+    <Button
+        android:id="@+id/btnAddNewEntry"
+        android:text="Add New Entry"
+        android:background="#2175bf"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:drawableLeft="@android:drawable/sym_action_chat"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_below="@+id/toolbar_withdrawal"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <HorizontalScrollView
+        android:layout_below="@+id/btnAddNewEntry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview_withdrawal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

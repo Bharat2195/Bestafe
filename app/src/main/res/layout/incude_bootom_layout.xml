@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/activity_vertical_margin"
+    app:behavior_hideable="true"
+    android:background="@color/white"
+    android:id="@+id/RelativeLayoutSheet"
+    app:behavior_peekHeight="60dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/txtSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SORT BY"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_margin="10dp"/>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_below="@+id/txtSortBy"
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"
+        android:layout_height="1dp">
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_popularity"
+        android:layout_below="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Popularity"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rdPop"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/radiobutton_on_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_low_to_high"
+        android:layout_below="@+id/relative_layout_popularity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Price -- Low to High"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rdLowToHigh"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_high_to_low"
+        android:layout_below="@+id/relative_layout_low_to_high"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Price -- Hight to Low"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rdHighToLow"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

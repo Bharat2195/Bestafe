@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.toranado.bestafe">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".paymet_class.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".SplashSignupActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymet_class.CustomDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CitrusAppTheme" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Product_Description"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginMainActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".PhpServiceCategoryActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransactionPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterActity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SponsorSummaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LevelIncome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SponsorListReport"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name=".Login.LoginModule" /> -->
+        <activity android:name=".WithdrawalReport" />
+        <activity android:name=".DashBoardCategoryActivity" />
+        <activity android:name=".DashBoardProductDescriptionActivity" />
+        <activity android:name=".DashBoard_product_show_image" />
+        <activity android:name=".DashboardCartActivity" />
+        <activity
+            android:name=".PaymentActivity"
+            android:theme="@style/CitrusAppTheme" />
+        <activity android:name=".FirstShowCategoryActivity" />
+        <activity android:name=".CategorySubCategoryActivity" />
+        <activity android:name=".Product_subcategory" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="21fd1e8decbc4c3e8afafba102965e368d339ba4" />
+
+        <activity android:name=".OrderConfirmationActivity" />
+        <activity android:name=".CartLoginActivity" />
+        <activity android:name=".PlacementSummaryClick" />
+        <activity android:name=".MobileWalletActivity" />
+        <activity android:name=".ViewProfileActivity" />
+        <activity android:name=".AddNewEntryActivity" />
+        <activity android:name=".PlacementSummary" />
+        <activity android:name=".DocumentListActivity" />
+        <activity android:name=".SponsorSummaryClickActivity" />
+        <activity android:name=".OrderHistoryActivity"></activity>
+    </application>
+
+</manifest>

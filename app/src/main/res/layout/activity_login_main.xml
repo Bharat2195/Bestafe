@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/toolbar_login_main"
+        layout="@layout/toolbar_login_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="pin" />
+
+    <View
+        android:id="@+id/view_loginMain"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_login_main"
+        android:background="@android:color/darker_gray"></View>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_loginMain">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view_loginMain">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/menuContent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="50"
+                                    android:baselineAligned="true">
+
+                                    <LinearLayout
+                                        android:id="@+id/btn_profile"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_marginRight="50dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/icon_myprofile"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="10dp">
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnChangePassword"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/change_password"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/ImageView03"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:src="@drawable/genology" />-->
+
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView3"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="Level Income"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="50"
+                                    android:baselineAligned="true">
+
+                                    <LinearLayout
+                                        android:id="@+id/btnChangeTransactionPassword"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_marginRight="50dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/change_transaction_password"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="10dp">
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnSponsorlist"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/sponsor_list"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/ImageView03"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:src="@drawable/genology" />-->
+
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView3"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="Level Income"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="50">
+
+                                    <LinearLayout
+                                        android:id="@+id/btnLevelSummary"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_marginRight="50dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/sponsor_summary"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/ImageView02"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:rotation="-45"-->
+                                        <!--android:src="@drawable/income" />-->
+
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView4"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="Genealogy"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnWithdrawal"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/withdrawal_rupay"
+                                        android:clickable="true"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/imageView7"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:src="@drawable/account" />-->
+
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView7"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="E-wallet"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="50">
+
+                                    <LinearLayout
+                                        android:id="@+id/btnLevelIncome"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_marginRight="50dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/level_income"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/imageView8"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:src="@drawable/ads" />-->
+
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView6"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="Reports"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/btnLogout"
+                                        android:layout_width="110dp"
+                                        android:layout_height="110dp"
+                                        android:layout_weight="50"
+                                        android:background="@drawable/logout_main"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/ImageView01"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:rotation="180"-->
+                                        <!--android:src="@drawable/settings" />-->
+
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView5"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="General"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </ScrollView>
+
+
+                    </LinearLayout>
+
+                    <!--
+                                    <LinearLayout
+                                        android:id="@+id/footer"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="10"
+                                        android:background="@color/HeaderBack"
+                                        android:orientation="horizontal"
+                                        android:weightSum="100" >
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:weightSum="100" >
+
+                                            <SetImage
+                                                android:id="@+id/imageView3"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_weight="40"
+                                                android:src="@drawable/home" />
+
+                                            <TextView
+                                                android:id="@+id/textView8"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="-10dp"
+                                                android:text="HOME"
+                                                android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            style="w"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:background="@color/headerText"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:weightSum="100" >
+
+                                            <SetImage
+                                                android:id="@+id/imageView4"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_weight="40"
+                                                android:src="@drawable/businessplanblack" />
+
+                                            <TextView
+                                                android:id="@+id/textView9"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="-10dp"
+                                                android:text="BUSINESS PLAN"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:background="@color/headerText"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:weightSum="100" >
+
+                                            <SetImage
+                                                android:id="@+id/imageView5"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_weight="40"
+                                                android:src="@drawable/bankblack" />
+
+                                            <TextView
+                                                android:id="@+id/textView10"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="-10dp"
+                                                android:text="BANKING"
+                                                android:textColor="@android:color/background_dark"
+                                                android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="25"
+                                            android:background="@color/headerText"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:weightSum="100" >
+
+                                            <SetImage
+                                                android:id="@+id/imageView6"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_weight="40"
+                                                android:src="@drawable/contectusblack" />
+
+                                            <TextView
+                                                android:id="@+id/textView11"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="-10dp"
+                                                android:text="CONTACT US"
+                                                android:textColor="@android:color/background_dark"
+                                                android:textSize="10sp" />
+
+                                        </LinearLayout>
+
+
+
+
+
+                                    </LinearLayout>
+                    -->
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|start">
+
+
+                <ExpandableListView
+                    android:id="@+id/list_slidermenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="#2d3941"
+                    android:choiceMode="singleChoice"
+                    android:clickable="true"
+                    android:divider="@android:color/white"
+                    android:dividerHeight="1dp"
+                    android:groupIndicator="@null"></ExpandableListView>
+            </RelativeLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

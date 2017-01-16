@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_cv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="17dp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lenovo"
+                android:textColor="#222"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitle"
+                android:text="Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtSeller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtColor"
+                android:layout_marginTop="5dp"
+                android:text="Seller: WS Retail"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSeller"
+                android:layout_marginTop="10dp"
+                android:text="Rs 6,999"
+                android:textColor="#222"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/imgBtnImage"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spinnerQty"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imgBtnImage"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_border"
+                android:spinnerMode="dropdown"></Spinner>
+
+            <TextView
+                android:id="@+id/txtFreeDeleviry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPrice"
+                android:layout_marginTop="5dp"
+                android:text="Free Delivery"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/view_cv1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/txtFreeDeleviry"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"></View>
+
+            <TextView
+                android:id="@+id/txtRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_cv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="REMOVE"
+                android:textColor="#222"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

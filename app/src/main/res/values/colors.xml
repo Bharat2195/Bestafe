@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <!--<color name="colorPrimary">#F50057</color>-->
+    <!--<color name="colorPrimaryDark">#F50057</color>-->
+    <!--<color name="colorAccent">#FF4081</color>0000-->
+
+    <!--<color name="colorPrimary">#607D8B</color>-->
+    <!--<color name="colorPrimaryDark">#455A64</color>-->
+    <!--<color name="colorAccent">#FFFFFF</color>-->
+    <!--<color name="colorPrimaryText">#212121</color>-->
+    <!--<color name="colorSecondaryText">#757575</color>-->
+    <!--<color name="colorDevider">#BDBDBD</color>-->
+    <!--<color name="colorText">#575757</color>-->
+    <!--<color name="colorLightPrimary">#CFD8DC</color>-->
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorAccent">#CDDC39</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorLightPrimary">#B2DFDB</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorSecondaryText">#757575</color>
+
+
+
+
+
+    <color name="red">#F44336</color>
+    <color name="pink_primary">#EB1E63</color>
+    <color name="pink_dark">#C0175C</color>
+    <color name="pink_accent">#C0175C</color>
+    <color name="royal_blue_primary">#4C63E2</color>
+    <color name="royal_blue_dark">#4055BF</color>
+    <color name="royal_blue_accent">#4055BF</color>
+    <color name="purple_primary">#9C28B1</color>
+    <color name="purple_dark">#7A1FA2</color>
+    <color name="purple_accent">#7A1FA2</color>
+
+    <color name="appbg">#F7941E</color>
+    <color name="hintcolor">#929191</color>
+    <color name="homerequest">#58B2C8</color>
+    <color name="homesend">#299699</color>
+    <color name="homesplit">#538CCD</color>
+    <color name="homelend">#149972</color>
+    <color name="pressed_color">#e5e5e5</color>
+    <color name="black">#000000</color>
+    <color name="holo_blue">#FF33B5E5</color>
+    <color name="lendimagebg">#dddddd</color>
+    <color name="firstSignInUp">#2FA5A9</color>
+    <color name="secondSignInUp">#68BFD2</color>
+    <color name="thirdSignInUp">#649FD7</color>
+    <color name="fourthSignInUp">#01A785</color>
+    <color name="toggleColor">#33B5E5</color>
+    <color name="profile_selected">#FFB340</color>
+
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="list_group_title">#FFFFFF</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+    <color name="title_background">#ff222222</color>
+    <color name="foreground1">#ff355689</color>
+
+    <color name="group_divider_color">#80CBC4</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#F0F014</color>
+    <color name="list_divider">#272727</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+
+
+</resources>

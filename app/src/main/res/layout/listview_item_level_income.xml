@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtSrNo"
+            android:textSize="14sp"
+            android:text="Sr.No"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtEntryDate"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="EntryDate"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+
+        <TextView
+            android:id="@+id/txtFromId"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="From Id"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtFromName"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="From Name"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtLevelNo"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="Level No."
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="Status"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="Amount"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+
+
+
+        <TextView
+            android:id="@+id/txtOrderNo"
+            android:textSize="14sp"
+            android:background="@color/white"
+            android:text="Order No"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

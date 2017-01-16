@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtSrNo"
+            android:textSize="14sp"
+            android:background="@android:color/white"
+            android:text="Sr.No"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:id="@+id/txtDocumentName"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:background="@android:color/white"
+            android:text="Document Name"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+
+        <Button
+            android:id="@+id/btnChooseFile"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="Choose File"
+            android:textStyle="bold"
+            android:layout_width="300dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:id="@+id/txtChossenName"
+            android:textSize="14sp"
+            android:textColor="@color/holo_blue"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="No Chossen File"
+            android:textStyle="bold"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+
+
+        <TextView
+            android:id="@+id/txtView"
+            android:textSize="14sp"
+            android:textColor="@color/holo_blue"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="View"
+            android:textStyle="bold"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:textSize="14sp"
+            android:textColor="@color/holo_blue"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

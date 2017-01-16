@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.toranado.bestafe.AddtocartActivity">
+
+
+    <include
+        android:id="@+id/toolbar_addtocart"
+        layout="@layout/addtocart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_addtocart">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="17dp">
+
+            <TextView
+                android:id="@+id/txtPincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Pincode"
+                android:textColor="#222"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtShowPincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/txtPincode"
+                android:inputType="number"
+                android:text="560036"
+                android:textColor="#4285f4"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/button_border"
+                android:text="Change"
+                android:textAllCaps="false"
+                android:textColor="#4285f4"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

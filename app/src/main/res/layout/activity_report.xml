@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/toolbar_report"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </include>
+
+    <include
+        android:id="@+id/report_view"
+        layout="@layout/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </include>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:background="#00adef"
+        android:padding="5dp"
+        android:text="Sponsor List"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal|vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:scrollbars="horizontal|vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_bootom">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="Sr No."
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Member ID"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Member Name"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Mobile"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Joining Date"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cellborder"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Activation Date"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_slno"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:background="#ccc"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="1"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/txtSrNo"-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/valuecellborder"-->
+                    <!--android:padding="7dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Sr No."-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:textStyle="bold"/>-->
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_propertyid"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:text="932465"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_tenentname"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="BESTAFE ONLINE"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_contactno"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="9655551959"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_amount"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="21-July-2016"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Activation_Date"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="21-July-2016"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <!-- </LinearLayout> -->
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_slno1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f9f9f9"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="2"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_propertyid1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="572134"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_tenentname1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="BESTAFE ONLINE"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_contactno1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="9376932622"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_amount1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="21-July-2016"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Activation_date1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="21-July-2016"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <!-- </LinearLayout> -->
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_slno2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#ccc"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="3"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_propertyid2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="368591"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_tenentname2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="BESTAFE ONLINE"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_contactno2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="9558915152"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_propertylistitem_amount2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="21-July-2016"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Activation_Date2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="21-July-2016"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <!-- </LinearLayout> -->
+                </TableRow>
+
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>

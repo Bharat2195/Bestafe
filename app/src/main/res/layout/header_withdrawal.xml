@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtSrNo"
+            android:textSize="14sp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Sr.No"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtEntryDate"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Entry Date"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Amount"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtTDS"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:text="TDS"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtProcessingFees"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Processing Fees"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+
+        <TextView
+            android:id="@+id/txtPayableAmount"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Payble Amount"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Status"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="120dp"
+            android:layout_height="50dp" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txtOrderNo"
+        android:text="Order No 391"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:text="2"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_below="@+id/txtOrderNo"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:text="Name"
+        android:layout_below="@+id/txtDate"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtModelName"
+        android:text="Model"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

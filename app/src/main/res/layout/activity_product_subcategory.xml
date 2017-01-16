@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.toranado.bestafe.DashboardCartActivity">
+
+    <include
+        android:id="@+id/toolbar_product_subcategory"
+        layout="@layout/toolbar_login_main_search"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"></include>
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:id="@+id/mSwipeRefres"-->
+        <!--android:layout_below="@+id/toolbar_product_subcategory"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!---->
+
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <ListView
+        android:id="@+id/listviewProductSubCategory"
+        android:layout_below="@+id/toolbar_product_subcategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+
+
+</RelativeLayout>

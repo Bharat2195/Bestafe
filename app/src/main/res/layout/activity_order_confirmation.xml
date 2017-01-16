@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_order_confirmation"
+            layout="@layout/toolbar_login_main"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+        </include>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar_order_confirmation"
+        android:layout_above="@+id/mRelative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/layout_order_confirmation"></include>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/mRelative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtFooterTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="All Total:"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtFooterTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_toRightOf="@+id/txtFooterTotal"
+                    android:text="RS.160"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btnPlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtFooterTotalPrice"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/holo_red_light"
+                    android:padding="10dp"
+                    android:text="PLACE ORDER"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+

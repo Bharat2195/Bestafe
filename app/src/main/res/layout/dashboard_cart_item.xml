@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRelative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<SetImage-->
+                <!--android:id="@+id/imgProduct"-->
+                <!--android:src="@drawable/album3"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:layout_height="150dp" />-->
+
+
+
+
+        <!--</LinearLayout>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtProductTitle"
+                android:text="Title"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/txtProductPrice"
+                android:layout_below="@+id/txtProductTitle"
+                android:textStyle="bold"
+                android:text="Rs 100"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/txtShipping"
+                android:text="Free Shipping"
+                android:layout_marginTop="@dimen/dimen_15_dp"
+                android:layout_below="@+id/txtProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Quantity: "
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/etQuantity"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:background="@android:drawable/alert_light_frame"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+        </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_below="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="#fcfafa"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtSubTotal"
+                android:text="SubTotal:"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtSubTotalPrice"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Rs 0.00"
+                android:padding="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtShippingPrice"
+                android:layout_below="@+id/txtSubTotal"
+                android:text="Shipping:"
+                android:textColor="@android:color/black"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtPriceShipping"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/txtSubTotalPrice"
+                android:text="Rs 0.00"
+                android:padding="5dp"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_below="@+id/txtShippingPrice"
+                android:text="Total:"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtTotalPrice"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/holo_red_light"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtPriceShipping"
+                android:text="Rs 0.00"
+                android:padding="5dp"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/view_cv1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/txtTotalPrice"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"></View>
+
+            <TextView
+                android:id="@+id/txtRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_cv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="REMOVE"
+                android:textColor="#222"
+                android:textSize="15sp" />
+
+            <!--<Button-->
+                <!--android:id="@+id/btnBuy"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="BUY"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_below="@+id/txtTotalPrice"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="#ffdad7"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:textColor="@android:color/holo_red_light"-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="50dp" />-->
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="com.toranado.bestafe.OrderConfirmationActivity">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#fcfafa">
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_address"
+                app:cardBackgroundColor="@color/white">
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<Button-->
+                        <!--android:id="@+id/btnADDAddress"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:background="#ffdad7"-->
+                        <!--android:padding="10dp"-->
+                        <!--android:text="ADD NEW ADDRESS"-->
+                        <!--android:textColor="@android:color/holo_red_light" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txtName"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/btnADDAddress"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:text="Bharat"-->
+                        <!--android:textColor="@color/black"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:visibility="gone" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txtAddress"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/txtName"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:text="Ahmedabad"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:visibility="gone" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txtAddress1"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/txtAddress"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:text="Ahmedabad"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:visibility="gone" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txtAddress2"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/txtAddress1"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:text="380005"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:visibility="gone" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txtMobile"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/txtAddress2"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:text="9558915152"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:visibility="gone" />-->
+
+
+                <!--</RelativeLayout>-->
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_address1"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#fcfafa">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtSeller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Seller: Bestafe" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_details"
+                app:cardBackgroundColor="@android:color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="60dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp" />
+
+                    <TextView
+                        android:id="@+id/txtProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/imgProduct"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtProductName"
+                        android:layout_margin="10dp"
+                        android:text="Rs. 2000"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtMinus"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/txtPrice"
+                        android:layout_toLeftOf="@+id/txtQunty"
+                        android:background="@color/vpi__bright_foreground_disabled_holo_light"
+                        android:drawableLeft="@drawable/minus" />
+
+                    <TextView
+                        android:id="@+id/txtQunty"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/txtPrice"
+                        android:layout_toLeftOf="@+id/txtPlus"
+                        android:background="#fcfafa"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/txtPlus"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtPrice"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/vpi__bright_foreground_disabled_holo_light"
+                        android:drawableLeft="@drawable/plus" />
+
+
+                    <TextView
+                        android:id="@+id/txtFreeShopping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtPlus"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Frees Shipping" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_subTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_image"
+                app:cardBackgroundColor="#fcfafa">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtSubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5_dp"
+                        android:padding="10dp"
+                        android:text="Subtotal:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtSubTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/dimen_5_dp"
+                        android:padding="10dp"
+                        android:text="RS. 160"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtShipping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtSubTotal"
+                        android:layout_margin="@dimen/dimen_5_dp"
+                        android:padding="10dp"
+                        android:text="Shipping:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtShippingPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/txtSubTotalPrice"
+                        android:layout_margin="@dimen/dimen_5_dp"
+                        android:padding="10dp"
+                        android:text="RS. 0.00"
+                        android:textSize="16sp" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_Cuppon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_view_subTotal"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtStoreCupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Store Coupon:"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtNoCupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"
+                        android:text="No coupons available"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_Total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/card_view_Cuppon"
+                app:cardBackgroundColor="#fcfafa">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtAllTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5_dp"
+                        android:padding="10dp"
+                        android:text="AllTotal:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtAllTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/dimen_5_dp"
+                        android:padding="10dp"
+                        android:text="RS. 160"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

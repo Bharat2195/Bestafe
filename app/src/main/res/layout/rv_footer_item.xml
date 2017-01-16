@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv1"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_cv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="20dp" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/txtPriceDetails"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:text="PRICE DETAILS"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<View-->
+                <!--android:id="@+id/view1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_below="@+id/txtPriceDetails"-->
+                <!--android:background="@android:color/darker_gray"></View>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/Price"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/view1"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:text="Price (1 item)"-->
+                <!--android:textColor="#222"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txtShowPrice"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/view1"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:text="Rs 6,999"-->
+                <!--android:textColor="#222"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/Delivery"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/Price"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:text="Delivery"-->
+                <!--android:textColor="#222"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txtShowDelivery"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/Price"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:text="Free"-->
+                <!--android:textColor="#222"-->
+                <!--android:textSize="15sp" />-->
+
+
+            <!--<View-->
+                <!--android:id="@+id/view2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_below="@+id/Delivery"-->
+                <!--android:background="@android:color/darker_gray"></View>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txtAmountPayable"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/view2"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:text="Amount Payable"-->
+                <!--android:textColor="#222"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/txtShowAmountPayable"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@+id/view2"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:text="Rs 6,999"-->
+                <!--android:textColor="#222"-->
+                <!--android:textSize="15sp" />-->
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/txtSafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv2"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="@string/safe_Details" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSafe"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_cv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold"
+                android:text="Rs 6,999"
+                android:textColor="#222"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="#fb641b"
+                android:padding="10dp"
+                android:text="Continue"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

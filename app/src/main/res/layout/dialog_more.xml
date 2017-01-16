@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtEnterQuanity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:text="Enter Quanity"
+        android:textColor="#222"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/etQuanity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEnterQuanity"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4285f4"
+        android:hint="Quanity" />
+
+
+    <View
+        android:id="@+id/viewQuanity"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/etQuanity"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/darker_gray"></View>
+
+    <TextView
+        android:id="@+id/txtMoreCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewQuanity"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:text="CANCEL"
+        android:textColor="#222"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/view_save"
+        android:layout_width="1dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/viewQuanity"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/darker_gray"></View>
+
+    <TextView
+        android:id="@+id/txtMoreSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewQuanity"
+        android:layout_margin="15dp"
+        android:layout_toRightOf="@+id/view_save"
+        android:padding="15dp"
+        android:text="SAVE"
+        android:textColor="#4d90fe"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

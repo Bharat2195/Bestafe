@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar_add_new_entry"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        layout="@layout/toolbar_login_main">
+
+    </include>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar_add_new_entry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mCard_view"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_no_pancard"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <TextView
+                        android:id="@+id/txtPanMsg"
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"
+                        android:layout_centerInParent="true"
+                        android:text="Please Insert your Pan Card!!!"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtBalance"
+                        android:text="Withdrawal Balance:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/txtWithdrawalAmountTitle"
+                        android:layout_below="@+id/txtBalance"
+                        android:text="Withdrawal Rs:"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <EditText
+                        android:id="@+id/etWithdrawalAmount"
+                        android:layout_below="@+id/txtBalance"
+                        android:hint="0"
+                        android:focusable="false"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/txtWithdrawalAmountTitle"
+                        android:background="@drawable/selected_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txtWithdrawalAmount"
+                        android:layout_below="@+id/etWithdrawalAmount"
+                        android:text="Withdrawal Amount:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#87ff00"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/WithdrawalAmount"
+                        android:layout_below="@+id/etWithdrawalAmount"
+                        android:layout_toRightOf="@+id/txtWithdrawalAmount"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#87ff00"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/txtAppliesTds"
+                        android:layout_below="@+id/txtWithdrawalAmount"
+                        android:text="Applied TDS(5%)="
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/AppliesTds"
+                        android:layout_below="@+id/txtWithdrawalAmount"
+                        android:layout_toRightOf="@+id/txtAppliesTds"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/txtProcessingFees"
+                        android:layout_below="@+id/txtAppliesTds"
+                        android:text="Processing Fees(5%)="
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/ProcessingFees"
+                        android:layout_below="@+id/txtAppliesTds"
+                        android:textSize="18sp"
+                        android:layout_toRightOf="@+id/txtProcessingFees"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/txtTotalDeduction"
+                        android:layout_below="@+id/txtProcessingFees"
+                        android:text="Total Deduction="
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/TotalDeduction"
+                        android:layout_below="@+id/txtProcessingFees"
+                        android:layout_toRightOf="@+id/txtTotalDeduction"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/txtPayableAmount"
+                        android:layout_below="@+id/txtTotalDeduction"
+                        android:text="Payable Amount:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/PayableAmount"
+                        android:layout_below="@+id/txtTotalDeduction"
+                        android:layout_toRightOf="@+id/txtPayableAmount"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:id="@+id/txtTransactionPassword"
+                        android:layout_below="@+id/txtPayableAmount"
+                        android:text="Transaction Password:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#87ff00"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/etTransactionPassword"
+                        android:layout_below="@+id/txtTransactionPassword"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:background="@drawable/change_password_corner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txtErrorMessage"
+                        android:layout_below="@+id/etTransactionPassword"
+                        android:text="You Have Required 600BV Shopping For More Withdraw Amount."
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/red"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:text="Submit"
+                        android:layout_below="@+id/txtErrorMessage"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#1e9bd8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/Balance"
+                        android:text="You Don't Have Sufficient Balance"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/txtWithdrawalAmountTitle"
+                        android:layout_toRightOf="@+id/txtWithdrawalAmount"
+                        android:layout_toEndOf="@+id/txtWithdrawalAmount"
+                        android:layout_marginBottom="38dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
