@@ -87,7 +87,6 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
 
 
         Intent intent = getIntent();
-
         listModelName = intent.getStringArrayListExtra("strProductName");
         Log.d(TAG, "product Name: " + listModelName);
         listProductId = intent.getStringArrayListExtra("strProductId");
@@ -102,12 +101,6 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
         Log.d(TAG, "payment bv: " + listMpn);
         strTotal = intent.getStringExtra("strTotal");
         Log.d(TAG, "total price: " + strTotal);
-
-
-
-
-
-
 
         settings = getSharedPreferences("settings", MODE_PRIVATE);
 //        logoutBtn = (Button) findViewById(R.id.logout_button);

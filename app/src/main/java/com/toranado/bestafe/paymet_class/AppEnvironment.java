@@ -14,27 +14,27 @@ public enum AppEnvironment {
 //
 //        @Override
 //        public String getVanity() {
-//            return "69wy3vy3tl";
+//            return "nativeSDK";
 //        }
 //
 //        @Override
 //        public String getSignUpId() {
-//            return "69wy3vy3tl-signup";
+//            return "9hh5re3r5q-signup";
 //        }
 //
 //        @Override
 //        public String getSignUpSecret() {
-//            return "51029a02860885c2f1b46f0e49656b8e";
+//            return "3be4d7bf59c109e76a3619a33c1da9a8";
 //        }
 //
 //        @Override
 //        public String getSignInId() {
-//            return "69wy3vy3tl-signin";
+//            return "9hh5re3r5q-signin";
 //        }
 //
 //        @Override
 //        public String getSignInSecret() {
-//            return "be9b6794e497a90b2e9fc66a7b867024";
+//            return "ffcfaaf6e6e78c2f654791d9d6cb7f09";
 //        }
 //
 //        @Override

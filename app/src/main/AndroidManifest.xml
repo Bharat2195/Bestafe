@@ -102,7 +102,7 @@
         <activity android:name=".PlacementSummary" />
         <activity android:name=".DocumentListActivity" />
         <activity android:name=".SponsorSummaryClickActivity" />
-        <activity android:name=".OrderHistoryActivity"></activity>
+        <activity android:name=".OrderHistoryActivity" />
     </application>
 
 </manifest>

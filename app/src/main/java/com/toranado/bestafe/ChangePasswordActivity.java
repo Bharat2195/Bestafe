@@ -50,7 +50,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-
         Intent intent=getIntent();
         strMemberid=intent.getStringExtra("memberid");
 
@@ -144,8 +143,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
                         txtErrorConPassword.setVisibility(View.GONE);
                     }
 
-
-
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -161,7 +158,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
             }
         });
-
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -181,8 +177,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 strOldPassword = etOldPassword.getText().toString();
                 strNewPassword = etNewPassword.getText().toString();
                 strConfirmPassword = etConfirmPassword.getText().toString();
-
-
 
                 if (StringUtils.isBlank(strOldPassword)) {
                     Toast.makeText(getApplicationContext(), "Please Enter OldPassword", Toast.LENGTH_SHORT).show();
