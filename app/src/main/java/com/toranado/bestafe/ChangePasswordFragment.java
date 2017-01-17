@@ -1,19 +1,18 @@
 package com.toranado.bestafe;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,80 +30,36 @@ import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ChangePasswordActivity extends AppCompatActivity {
-
+/**
+ * Created by cphp on 17-Jan-17.
+ */
+public class ChangePasswordFragment extends Fragment {
     private EditText etOldPassword, etNewPassword, etConfirmPassword;
     private Button btnUpadateNow;
-    private Toolbar changepassword_toolbar;
     String strChangePwdRespose="",strChangePwdMessage="",strOldPassword = "", strNewPassword = "", strConfirmPassword = "", strMemberid = "",JsonResponse="",strMessagge ="",strChangePasswordResponse="";
-    private static final String TAG = ChangePasswordActivity.class.getSimpleName();
+    private static final String TAG = ChangePasswordFragment.class.getSimpleName();
     TextView txtErrorOldPassword,txtErrorConPassword, txtSignIn,txtTitle;
-    ImageView imgSignIn;
-    public static final String PREFS_NAME="LoginPrefes";
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_password);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
+    public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_change_password,container,false);
+    }
 
-        Intent intent=getIntent();
-        strMemberid=intent.getStringExtra("memberid");
+    @Override
+    public void onActivityCreated( Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        changepassword_toolbar = (Toolbar) findViewById(R.id.changepassword_toolbar);
-        txtTitle=(TextView)changepassword_toolbar.findViewById(R.id.txtTitle);
-        txtTitle.setText("Change Password");
+        strMemberid=LoginMainActivity.strId;
 
-        txtErrorConPassword= (TextView) findViewById(R.id.txtErrorConPassword);
-        txtErrorOldPassword= (TextView) findViewById(R.id.txtErrorOldPassword);
+        txtErrorConPassword= (TextView) getActivity().findViewById(R.id.txtErrorConPassword);
+        txtErrorOldPassword= (TextView) getActivity().findViewById(R.id.txtErrorOldPassword);
 
-        changepassword_toolbar.setNavigationIcon(R.drawable.arrowleft);
-        changepassword_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-//        imgSignIn=(SetImage)changepassword_toolbar.findViewById(R.id.imgSignIn);
-//        txtSignIn=(TextView)changepassword_toolbar.findViewById(R.id.txtSignIn);
-//        imgSignIn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                SharedPreferences preferences=getSharedPreferences(PREFS_NAME,0);
-//                if (preferences.getString("logged","").toString().equals("logged")) {
-//                    Intent intent = new Intent(ChangePasswordActivity.this, LoginMainActivity.class);
-//                    intent.putExtra("id", preferences.getString("id", "").toString());
-//                    startActivity(intent);
-//                }else {
-//                    Intent intentLogin=new Intent(ChangePasswordActivity.this,LoginActivity.class);
-//                    startActivity(intentLogin);
-//                }
-//
-//
-//            }
-//        });
-//
-//        txtSignIn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                SharedPreferences preferences=getSharedPreferences(PREFS_NAME,0);
-//                if (preferences.getString("logged","").toString().equals("logged")) {
-//                    Intent intent = new Intent(ChangePasswordActivity.this, LoginMainActivity.class);
-//                    intent.putExtra("id", preferences.getString("id", "").toString());
-//                    startActivity(intent);
-//                }else {
-//                    Intent intentTxtLogin=new Intent(ChangePasswordActivity.this,LoginActivity.class);
-//                    startActivity(intentTxtLogin);
-//                }
-//
-//            }
-//        });
-        etOldPassword = (EditText) findViewById(R.id.etOldPassword);
-        etNewPassword = (EditText) findViewById(R.id.etNewPassword);
-        etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
-        btnUpadateNow = (Button) findViewById(R.id.btnUpadateNow);
+        etOldPassword = (EditText) getActivity().findViewById(R.id.etOldPassword);
+        etNewPassword = (EditText) getActivity().findViewById(R.id.etNewPassword);
+        etConfirmPassword = (EditText) getActivity().findViewById(R.id.etConfirmPassword);
+        btnUpadateNow = (Button) getActivity().findViewById(R.id.btnUpadateNow);
 
         etOldPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -160,16 +115,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        changepassword_toolbar.setNavigationIcon(R.drawable.arrowleft);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
-        changepassword_toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
 
         btnUpadateNow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,21 +124,21 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 strConfirmPassword = etConfirmPassword.getText().toString();
 
                 if (StringUtils.isBlank(strOldPassword)) {
-                    Toast.makeText(getApplicationContext(), "Please Enter OldPassword", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Please Enter OldPassword", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (txtErrorOldPassword.getVisibility()==View.VISIBLE){
-                    Toast.makeText(ChangePasswordActivity.this, "Invaid Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Invaid Password", Toast.LENGTH_SHORT).show();
                 }
                 if (StringUtils.isBlank(strNewPassword)) {
-                    Toast.makeText(getApplicationContext(), "Please Enter New Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Please Enter New Password", Toast.LENGTH_SHORT).show();
                 }
                 if (StringUtils.isBlank(strConfirmPassword)) {
-                    Toast.makeText(getApplicationContext(), "Please Enter ConfirmPassword", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Please Enter ConfirmPassword", Toast.LENGTH_SHORT).show();
                 }
 
                 if (!strConfirmPassword.equals(strNewPassword)){
-                    Toast.makeText(getApplicationContext(),"Both Password don't match",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Both Password don't match",Toast.LENGTH_SHORT).show();
                 }else if (strConfirmPassword.equals(strNewPassword)){
 
                     if (strMessagge.equals("Success")){
@@ -210,20 +155,23 @@ public class ChangePasswordActivity extends AppCompatActivity {
                             new Postdata().execute(String.valueOf(jsonObject));
                         }
                     }else {
-                        Toast.makeText(getApplicationContext(),"Please Enter Correct Old Password",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),"Please Enter Correct Old Password",Toast.LENGTH_SHORT).show();
                     }
 
                 }
 
-                }
+            }
 
 
 
 
         });
+
+
+
     }
 
-    private class checkPassword  extends AsyncTask<String,String,String>{
+    private class checkPassword  extends AsyncTask<String,String,String> {
         @Override
         protected String doInBackground(String... params) {
 
@@ -293,16 +241,17 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
 
             if (strMessagge.equals("Success")){
-                Toast.makeText(getApplicationContext(),"Old Password Correct",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Old Password Correct",Toast.LENGTH_SHORT).show();
                 txtErrorOldPassword.setVisibility(View.GONE);
             }else {
-                Toast.makeText(getApplicationContext(),"Old Password Incorrect",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Old Password Incorrect",Toast.LENGTH_SHORT).show();
                 txtErrorOldPassword.setVisibility(View.VISIBLE);
                 etNewPassword.setClickable(false);
                 etConfirmPassword.setClickable(false);
             }
         }
     }
+
 
     private class Postdata  extends AsyncTask<String,String,String>{
         @Override
@@ -374,15 +323,16 @@ public class ChangePasswordActivity extends AppCompatActivity {
             }
 
             if (strMessagge.equals("Success")){
-                Toast.makeText(getApplicationContext(),strChangePasswordResponse,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),strChangePasswordResponse,Toast.LENGTH_SHORT).show();
                 etOldPassword.getText().clear();
                 etNewPassword.getText().clear();
                 etConfirmPassword.getText().clear();
             }else {
-                Toast.makeText(getApplicationContext(),strChangePasswordResponse,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),strChangePasswordResponse,Toast.LENGTH_SHORT).show();
                 etNewPassword.setClickable(false);
                 etConfirmPassword.setClickable(false);
             }
         }
     }
+
 }

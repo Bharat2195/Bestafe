@@ -53,12 +53,6 @@
         <!-- android:name=".PhpServiceCategoryActivity" -->
         <!-- android:screenOrientation="portrait" /> -->
         <activity
-            android:name=".ChangePasswordActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".TransactionPasswordActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".ReportActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -103,6 +97,7 @@
         <activity android:name=".DocumentListActivity" />
         <activity android:name=".SponsorSummaryClickActivity" />
         <activity android:name=".OrderHistoryActivity" />
+        <activity android:name=".MembeChangePasswordActivity"></activity>
     </application>
 
 </manifest>

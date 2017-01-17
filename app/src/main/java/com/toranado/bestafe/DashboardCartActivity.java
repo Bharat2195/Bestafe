@@ -27,6 +27,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.toranado.bestafe.adpter.CartItem;
 import com.toranado.bestafe.adpter.CartPojo;
 import com.toranado.bestafe.interfaces.ClickListner;
@@ -106,6 +108,10 @@ public class DashboardCartActivity extends AppCompatActivity {
 
         final CartPojo cartPojo=new CartPojo();
         txtTotalPrice.setText(cartPojo.getStrPrice());
+
+        YoYo.with(Techniques.BounceInDown)
+                .duration(1000)
+                .playOn(mListview);
 
         mListview.addFooterView(view);
 

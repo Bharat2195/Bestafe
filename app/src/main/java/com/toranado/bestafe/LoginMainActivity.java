@@ -76,7 +76,7 @@ LoginMainActivity extends AppCompatActivity {
         btnLevelIncome = (LinearLayout) findViewById(R.id.btnLevelIncome);
         btnLogout = (LinearLayout) findViewById(R.id.btnLogout);
         btnChangePassword= (LinearLayout) findViewById(R.id.btnChangePassword);
-        btnChangeTransactionPassword= (LinearLayout) findViewById(R.id.btnChangeTransactionPassword);
+//        btnChangeTransactionPassword= (LinearLayout) findViewById(R.id.btnChangeTransactionPassword);
 
         toolbar_login_main = (Toolbar) findViewById(R.id.toolbar_login_main);
         txtTitle=(TextView)toolbar_login_main.findViewById(R.id.txtTitle);
@@ -142,20 +142,20 @@ LoginMainActivity extends AppCompatActivity {
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentChangePWd=new Intent(LoginMainActivity.this,ChangePasswordActivity.class);
-                intentChangePWd.putExtra("memberid",strId);
+                Intent intentChangePWd=new Intent(LoginMainActivity.this,MembeChangePasswordActivity.class);
+//                intentChangePWd.putExtra("memberid",strId);
                 startActivity(intentChangePWd);
             }
         });
 
-        btnChangeTransactionPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentChnageTransactionPassword=new Intent(LoginMainActivity.this,TransactionPasswordActivity.class);
-                intentChnageTransactionPassword.putExtra("memberid",strId);
-                startActivity(intentChnageTransactionPassword);
-            }
-        });
+//        btnChangeTransactionPassword.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intentChnageTransactionPassword=new Intent(LoginMainActivity.this,TransactionPasswordActivity.class);
+////                intentChnageTransactionPassword.putExtra("memberid",strId);
+//                startActivity(intentChnageTransactionPassword);
+//            }
+//        });
 
         btnLevelIncome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -286,15 +286,15 @@ LoginMainActivity extends AppCompatActivity {
                                 startActivity(intentLogin);
                                 break;
                             case 1:
-                                Intent intentChangePassword = new Intent(LoginMainActivity.this, ChangePasswordActivity.class);
-                                intentChangePassword.putExtra("memberid", strId);
+                                Intent intentChangePassword = new Intent(LoginMainActivity.this, MembeChangePasswordActivity.class);
+                                intentChangePassword.putExtra("tabIndex", "0");
                                 startActivity(intentChangePassword);
                                 //fragment=new fragment_change_password();
                                 break;
 
                             case 2:
-                                Intent intentTransactionPassword = new Intent(LoginMainActivity.this, TransactionPasswordActivity.class);
-                                intentTransactionPassword.putExtra("memberid", strId);
+                                Intent intentTransactionPassword = new Intent(LoginMainActivity.this, MembeChangePasswordActivity.class);
+                                intentTransactionPassword.putExtra("tabIndex", "1");
                                 startActivity(intentTransactionPassword);
                                 //fragment=new Fragment_transaction_password();
                                 break;

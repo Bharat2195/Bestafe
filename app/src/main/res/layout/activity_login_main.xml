@@ -125,18 +125,46 @@
                                     android:baselineAligned="true">
 
                                     <LinearLayout
-                                        android:id="@+id/btnChangeTransactionPassword"
+                                        android:id="@+id/btnLevelIncome"
                                         android:layout_width="110dp"
                                         android:layout_height="110dp"
                                         android:layout_marginRight="50dp"
                                         android:layout_weight="50"
-                                        android:background="@drawable/change_transaction_password"
+                                        android:background="@drawable/level_income"
                                         android:gravity="center"
-                                        android:orientation="vertical"
-                                        android:padding="10dp">
+                                        android:orientation="vertical">
 
+                                        <!--<SetImage-->
+                                        <!--android:id="@+id/imageView8"-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:src="@drawable/ads" />-->
 
+                                        <!--<TextView-->
+                                        <!--android:id="@+id/textView6"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:text="Reports"-->
+                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                                        <!--android:textColor="@color/white"-->
+                                        <!--android:textSize="12sp" />-->
                                     </LinearLayout>
+
+
+                                    <!--<LinearLayout-->
+                                        <!--android:id="@+id/btnChangeTransactionPassword"-->
+                                        <!--android:layout_width="110dp"-->
+                                        <!--android:layout_height="110dp"-->
+                                        <!--android:layout_marginRight="50dp"-->
+                                        <!--android:layout_weight="50"-->
+                                        <!--android:background="@drawable/change_transaction_password"-->
+                                        <!--android:gravity="center"-->
+                                        <!--android:orientation="vertical"-->
+                                        <!--android:padding="10dp">-->
+
+
+                                    <!--</LinearLayout>-->
 
                                     <LinearLayout
                                         android:id="@+id/btnSponsorlist"
@@ -239,32 +267,32 @@
                                     android:layout_gravity="center_horizontal"
                                     android:layout_weight="50">
 
-                                    <LinearLayout
-                                        android:id="@+id/btnLevelIncome"
-                                        android:layout_width="110dp"
-                                        android:layout_height="110dp"
-                                        android:layout_marginRight="50dp"
-                                        android:layout_weight="50"
-                                        android:background="@drawable/level_income"
-                                        android:gravity="center"
-                                        android:orientation="vertical">
+                                    <!--<LinearLayout-->
+                                        <!--android:id="@+id/btnLevelIncome"-->
+                                        <!--android:layout_width="110dp"-->
+                                        <!--android:layout_height="110dp"-->
+                                        <!--android:layout_marginRight="50dp"-->
+                                        <!--android:layout_weight="50"-->
+                                        <!--android:background="@drawable/level_income"-->
+                                        <!--android:gravity="center"-->
+                                        <!--android:orientation="vertical">-->
 
-                                        <!--<SetImage-->
-                                        <!--android:id="@+id/imageView8"-->
-                                        <!--android:layout_width="60dp"-->
-                                        <!--android:layout_height="60dp"-->
-                                        <!--android:src="@drawable/ads" />-->
+                                        <!--&lt;!&ndash;<SetImage&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:id="@+id/imageView8"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_width="60dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_height="60dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:src="@drawable/ads" />&ndash;&gt;-->
 
-                                        <!--<TextView-->
-                                        <!--android:id="@+id/textView6"-->
-                                        <!--android:layout_width="wrap_content"-->
-                                        <!--android:layout_height="wrap_content"-->
-                                        <!--android:layout_marginTop="-10dp"-->
-                                        <!--android:text="Reports"-->
-                                        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-                                        <!--android:textColor="@color/white"-->
-                                        <!--android:textSize="12sp" />-->
-                                    </LinearLayout>
+                                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:id="@+id/textView6"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_marginTop="-10dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:text="Reports"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:textAppearance="?android:attr/textAppearanceMedium"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:textSize="12sp" />&ndash;&gt;-->
+                                    <!--</LinearLayout>-->
 
                                     <LinearLayout
                                         android:id="@+id/btnLogout"

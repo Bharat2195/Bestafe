@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.squareup.picasso.Picasso;
 import com.toranado.bestafe.utils.Constant;
 
@@ -319,6 +321,14 @@ public class DashBoardProductDescriptionActivity extends AppCompatActivity {
                         listCartModel.add(strModel);
                         String strSize = String.valueOf(listCartModel.size());
                         txtNo.setText(strSize);
+
+                        if (listCartModel != null) {
+                            Intent intentCart = new Intent(DashBoardProductDescriptionActivity.this, DashboardCartActivity.class);
+                            startActivity(intentCart);
+
+                        } else {
+                            Toast.makeText(DashBoardProductDescriptionActivity.this, "No item in cart", Toast.LENGTH_SHORT).show();
+                        }
 
 //                        String[] strSplit = strPrice.split("\\.");
 //                        String values = strSplit[0];
