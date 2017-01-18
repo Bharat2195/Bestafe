@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
     ImageView imgSignUp,imgBack,imgCancle;
     private TextView txtRegister;
     private Toolbar toolbar_login;
-    private String strName="";
+    private String strName="",strFirstname="";
     private ProgressDialog pd;
 
     @Override
@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         if (preferences.getString("logged","").toString().equals("logged")){
             Intent intent=new Intent(LoginActivity.this,LoginMainActivity.class);
             intent.putExtra("id",preferences.getString("id","").toString());
+            intent.putExtra("strFirstname",preferences.getString("strFirstname","").toString());
             startActivity(intent);
         }
 
@@ -233,7 +234,7 @@ public class LoginActivity extends AppCompatActivity {
                     JSONObject jsonObject1=array.getJSONObject(i);
                     strCustomer_ID=jsonObject1.getString("memberid");
                     Log.d(TAG,"customerID:"+strCustomer_ID);
-                    String strFirstname=jsonObject1.getString("firstname");
+                    strFirstname=jsonObject1.getString("firstname");
                     Log.d(TAG,"Firstname:"+strFirstname);
                 }
             } catch (Exception e) {
@@ -246,11 +247,13 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor=sharedPreferences.edit();
                 editor.putString("logged","logged");
                 editor.putString("id",strCustomer_ID);
+                editor.putString("strFirstname",strFirstname);
                 editor.commit();
                 Intent intent = new Intent(LoginActivity.this, LoginMainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 intent.putExtra("id",strCustomer_ID);
+                intent.putExtra("strFirstname",strFirstname);
                 startActivity(intent);
             }else {
                 Toast.makeText(getApplicationContext(),strMessagge,Toast.LENGTH_SHORT).show();

@@ -86,7 +86,7 @@ public class DashboardCartActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
         toolbar_cart = (Toolbar) findViewById(R.id.toolbar_cart);
-        mSwipeRefres = (SwipeRefreshLayout) findViewById(R.id.mSwipeRefres);
+//        mSwipeRefres = (SwipeRefreshLayout) findViewById(R.id.mSwipeRefres);
         imgCart = (ImageView) toolbar_cart.findViewById(R.id.imgCart);
         imgCart.setVisibility(View.GONE);
         txtTitle = (TextView) toolbar_cart.findViewById(R.id.txtTitle);
@@ -123,31 +123,31 @@ public class DashboardCartActivity extends AppCompatActivity {
         //        });
 
 
-        mSwipeRefres.setColorSchemeColors(Color.GRAY, Color.GREEN, Color.BLUE,
-                Color.RED, Color.CYAN);
-        mSwipeRefres.setDistanceToTriggerSync(20);// in dips
-        mSwipeRefres.setSize(SwipeRefreshLayout.DEFAULT);// LARGE also can be used'
-
-        mSwipeRefres.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-
-                JSONObject jsonObject = new JSONObject();
-
-                try {
-
-                    jsonObject.put("mode", "cartdetail");
-                    jsonObject.put("did", strDeviceId);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                if (jsonObject.length() > 0) {
-                    new getCartdata().execute(String.valueOf(jsonObject));
-                }
-
-            }
-        });
+//        mSwipeRefres.setColorSchemeColors(Color.GRAY, Color.GREEN, Color.BLUE,
+//                Color.RED, Color.CYAN);
+//        mSwipeRefres.setDistanceToTriggerSync(20);// in dips
+//        mSwipeRefres.setSize(SwipeRefreshLayout.DEFAULT);// LARGE also can be used'
+//
+//        mSwipeRefres.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//
+//                JSONObject jsonObject = new JSONObject();
+//
+//                try {
+//
+//                    jsonObject.put("mode", "cartdetail");
+//                    jsonObject.put("did", strDeviceId);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//
+//                if (jsonObject.length() > 0) {
+//                    new getCartdata().execute(String.valueOf(jsonObject));
+//                }
+//
+//            }
+//        });
 
 
 //        listQunty.add("1");
@@ -308,7 +308,7 @@ public class DashboardCartActivity extends AppCompatActivity {
 
 
 
-                    mSwipeRefres.setRefreshing(false);
+//                    mSwipeRefres.setRefreshing(false);
 
                     if (mListview != null) {
                         customAdapter = new CustomAdapter(getApplicationContext(), R.layout.dashboard_cart_item, listItem);
@@ -322,7 +322,7 @@ public class DashboardCartActivity extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(DashboardCartActivity.this, "No item in Cart!!!", Toast.LENGTH_SHORT).show();
-                    mSwipeRefres.setRefreshing(false);
+//                    mSwipeRefres.setRefreshing(false);
                     mListview.removeFooterView(view);
                 }
             } catch (Exception e) {

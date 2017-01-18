@@ -208,17 +208,6 @@
                     android:textStyle="bold" />
 
 
-                <EditText
-                    android:id="@+id/etMobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtMobile"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/selected_edittext"
-                    android:inputType="number"
-                    android:padding="10dp"
-                    android:singleLine="true" />
-
                 <TextView
                     android:id="@+id/txtAddress"
                     android:layout_width="wrap_content"
@@ -385,8 +374,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtBankName"
                     android:layout_marginTop="5dp"
+                    android:singleLine="true"
                     android:background="@drawable/selected_edittext"
-                    android:inputType="number"
                     android:padding="10dp" />
 
                 <TextView
@@ -406,6 +395,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtAccountNumber"
                     android:layout_marginTop="5dp"
+                    android:inputType="number"
                     android:background="@drawable/selected_edittext"
                     android:padding="10dp" />
 
@@ -425,6 +415,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtIFSCCode"
                     android:layout_marginTop="5dp"
+                    android:singleLine="true"
                     android:background="@drawable/selected_edittext"
                     android:padding="10dp" />
 
@@ -444,6 +435,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtBranchName"
                     android:layout_marginTop="5dp"
+                    android:singleLine="true"
                     android:background="@drawable/selected_edittext"
                     android:padding="10dp" />
 
@@ -465,6 +457,18 @@
                         android:textColor="@color/white" />
 
                 </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selected_edittext"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:layout_below="@+id/txtMobile"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
             </RelativeLayout>
         </RelativeLayout>

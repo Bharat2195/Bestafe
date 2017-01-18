@@ -55,9 +55,10 @@ LoginMainActivity extends AppCompatActivity {
     private Toolbar toolbar_login_main;
     TextView txtSignIn, txtNo, txtYes,txtTitle;
     ImageView imgSignIn;
+    private String strFirstname="";
     public static final String PREFS_NAME = "LoginPrefes";
     public static final String CART_PREFS_NAME = "CartLoginPrefes";
-    LinearLayout btnChangePassword,btnChangeTransactionPassword, btn_profile, btnSponsorlist, btnLevelSummary, btnWithdrawal, btnLevelIncome, btnLogout;
+    LinearLayout btnChangePassword,btnPlacemntSummary, btn_profile, btnSponsorlist, btnLevelSummary, btnOrder, btnLevelIncome, btnLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,11 +73,11 @@ LoginMainActivity extends AppCompatActivity {
         btn_profile = (LinearLayout) findViewById(R.id.btn_profile);
         btnSponsorlist = (LinearLayout) findViewById(R.id.btnSponsorlist);
         btnLevelSummary = (LinearLayout) findViewById(R.id.btnLevelSummary);
-        btnWithdrawal = (LinearLayout) findViewById(R.id.btnWithdrawal);
+        btnOrder = (LinearLayout) findViewById(R.id.btnOrder);
         btnLevelIncome = (LinearLayout) findViewById(R.id.btnLevelIncome);
         btnLogout = (LinearLayout) findViewById(R.id.btnLogout);
         btnChangePassword= (LinearLayout) findViewById(R.id.btnChangePassword);
-//        btnChangeTransactionPassword= (LinearLayout) findViewById(R.id.btnChangeTransactionPassword);
+        btnPlacemntSummary= (LinearLayout) findViewById(R.id.btnPlacemntSummary);
 
         toolbar_login_main = (Toolbar) findViewById(R.id.toolbar_login_main);
         txtTitle=(TextView)toolbar_login_main.findViewById(R.id.txtTitle);
@@ -148,14 +149,14 @@ LoginMainActivity extends AppCompatActivity {
             }
         });
 
-//        btnChangeTransactionPassword.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentChnageTransactionPassword=new Intent(LoginMainActivity.this,TransactionPasswordActivity.class);
-////                intentChnageTransactionPassword.putExtra("memberid",strId);
-//                startActivity(intentChnageTransactionPassword);
-//            }
-//        });
+        btnPlacemntSummary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentPlacemetnSummary=new Intent(LoginMainActivity.this,PlacementSummary.class);
+                intentPlacemetnSummary.putExtra("memberid",strId);
+                startActivity(intentPlacemetnSummary);
+            }
+        });
 
         btnLevelIncome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,11 +185,11 @@ LoginMainActivity extends AppCompatActivity {
             }
         });
 
-        btnWithdrawal.setOnClickListener(new View.OnClickListener() {
+        btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentEwallet=new Intent(LoginMainActivity.this,WithdrawalReport.class);
-                intentEwallet.putExtra("memberid",strId);
+                Intent intentEwallet=new Intent(LoginMainActivity.this,OrderHistoryActivity.class);
+//                intentEwallet.putExtra("memberid",strId);
                 startActivity(intentEwallet);
             }
         });
@@ -210,6 +211,7 @@ LoginMainActivity extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
         Intent intent = getIntent();
         strId = intent.getStringExtra("id");
+        strFirstname=intent.getStringExtra("strFirstname");
         Log.d(TAG, "Login Main Activity ID:" + strId);
         setUpDrawer();
         mDrawerToggle = new android.support.v7.app.ActionBarDrawerToggle(this, container, toolbar_login_main, R.string.drawer_open, R.string.drawer_close) {

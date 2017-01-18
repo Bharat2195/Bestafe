@@ -85,7 +85,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corner_view_profile"
                 android:focusable="false"
-                android:hint="Placement Name"
+                android:hint="Sponsor Name"
                 android:padding="10dp"
                 android:singleLine="true" />
 
@@ -166,7 +166,7 @@
                 android:layout_below="@+id/etCity"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/corner_view_profile"
-                android:hint="Enter Zip Code"
+                android:hint="Enter Pin Code"
                 android:inputType="number"
                 android:padding="10dp"
                 android:singleLine="true" />

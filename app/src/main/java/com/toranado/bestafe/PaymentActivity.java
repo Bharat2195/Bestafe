@@ -267,7 +267,7 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d(TAG, "request code " + requestCode + " resultcode " + resultCode);
+        Log.d("MainActivity", "request code " + requestCode + " resultcode " + resultCode);
         if (requestCode == CitrusFlowManager.REQUEST_CODE_PAYMENT && resultCode == RESULT_OK && data !=
                 null) {
             // You will get data here if transaction flow is started through pay options other than wallet
@@ -275,15 +275,11 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
                     .INTENT_EXTRA_TRANSACTION_RESPONSE);
             // You will get data here if transaction flow is started through wallet
             ResultModel resultModel = data.getParcelableExtra(ResultFragment.ARG_RESULT);
-            Log.d(TAG, "resultmodel response: "+resultModel);
 
             // Check which object is non-null
             if (transactionResponse != null && transactionResponse.getJsonResponse() != null) {
                 // Decide what to do with this data
-                Log.d(TAG, "transaction response" + transactionResponse.getJsonResponse());
-            } else if (resultModel != null && resultModel.getTransactionResponse() != null) {
-                // Decide what to do with this data
-
+                Log.d(TAG, "Transaction response : " + transactionResponse.getJsonResponse());
                 jsonObject = null;
                 jsonArray = new JSONArray();
 
@@ -317,14 +313,78 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
-                Log.d(TAG, "result response" + resultModel.getTransactionResponse().getTransactionId());
+            } else if (resultModel != null && resultModel.getTransactionResponse() != null) {
+                // Decide what to do with this data
+                Log.d(TAG, "Result response : " + resultModel.getTransactionResponse().getTransactionId());
+            } else if (resultModel != null && resultModel.getError() != null) {
+                Log.d(TAG, "Error response : " + resultModel.getError().getRawResponse());
             } else {
                 Log.d(TAG, "Both objects are null!");
             }
         }
-
     }
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        Log.d(TAG, "request code " + requestCode + " resultcode " + resultCode);
+//        if (requestCode == CitrusFlowManager.REQUEST_CODE_PAYMENT && resultCode == RESULT_OK && data !=
+//                null) {
+//            // You will get data here if transaction flow is started through pay options other than wallet
+//            TransactionResponse transactionResponse = data.getParcelableExtra(CitrusUIActivity
+//                    .INTENT_EXTRA_TRANSACTION_RESPONSE);
+//            // You will get data here if transaction flow is started through wallet
+//            ResultModel resultModel = data.getParcelableExtra(ResultFragment.ARG_RESULT);
+//            Log.d(TAG, "resultmodel response: "+resultModel);
+//
+//            // Check which object is non-null
+//            if (transactionResponse != null && transactionResponse.getJsonResponse() != null) {
+//                // Decide what to do with this data
+//                Log.d(TAG, "transaction response" + transactionResponse.getJsonResponse());
+//            } else if (resultModel != null && resultModel.getTransactionResponse() != null) {
+//                // Decide what to do with this data
+//
+//                jsonObject = null;
+//                jsonArray = new JSONArray();
+//
+//                for (int i = 0; i < listModelName.size(); i++) {
+//                    jsonObject = new JSONObject();
+//                    try {
+//                        jsonObject.put("ProductName", listModelName.get(i));
+//                        jsonObject.put("ProductPrice", listPrice.get(i));
+//                        jsonObject.put("ProductMPN", listMpn.get(i));
+//                        jsonObject.put("ProductID", listProductId.get(i));
+//                        jsonObject.put("ProductQty", listQunty.get(i));
+//                        Log.d(TAG, "data with:" + jsonArray);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                    jsonArray.put(jsonObject);
+//                }
+//
+//
+//                try {
+//                    JSONObject finalobject = new JSONObject();
+//                    finalobject.put("mode", "postorder");
+//                    finalobject.put("memberId", strMemberId);
+//                    finalobject.put("wal", "1");
+//                    finalobject.put("amt", strTotal);
+//                    finalobject.put("CartData", jsonArray);
+//                    Log.d(TAG, "Cartdata:" + finalobject);
+//                    if (finalobject.length() > 0) {
+//                        new sendOrder().execute(String.valueOf(finalobject));
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//
+//                Log.d(TAG, "result response" + resultModel.getTransactionResponse().getTransactionId());
+//            } else {
+//                Log.d(TAG, "Both objects are null!");
+//            }
+//        }
+//
+//    }
 
     private class sendOrder extends AsyncTask<String, String, String> {
 

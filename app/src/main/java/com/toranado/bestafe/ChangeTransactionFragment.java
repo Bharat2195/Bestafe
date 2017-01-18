@@ -230,13 +230,15 @@ public class ChangeTransactionFragment extends Fragment {
                 e.printStackTrace();
             }
 
-            if (strMessagge.equals("Success")) {
-                Toast.makeText(getActivity(), "Old Password Correct", Toast.LENGTH_SHORT).show();
-                txtTransactionErrorOldPassword.setVisibility(View.GONE);
-            } else {
-                txtTransactionErrorOldPassword.setVisibility(View.VISIBLE);
-                Toast.makeText(getActivity(), "Old Password Incorrect", Toast.LENGTH_SHORT).show();
-            }
+
+                if (strMessagge.equals("Success")) {
+                    Toast.makeText(getActivity(), "Old Password Correct", Toast.LENGTH_SHORT).show();
+                    txtTransactionErrorOldPassword.setVisibility(View.GONE);
+                } else {
+                    txtTransactionErrorOldPassword.setVisibility(View.VISIBLE);
+                    Toast.makeText(getActivity(), "Old Password Incorrect", Toast.LENGTH_SHORT).show();
+                }
+
         }
     }
 

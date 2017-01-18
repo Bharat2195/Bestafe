@@ -36,6 +36,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import uk.co.senab.photoview.log.LoggerDefault;
+
 public class ViewProfileActivity extends AppCompatActivity {
 
     String strProductResponse = "", strLoginId = "", strUpdateResponse = "";
@@ -93,68 +95,8 @@ public class ViewProfileActivity extends AppCompatActivity {
         etRelationshipwithNominee = (EditText) findViewById(R.id.etRelationshipwithNominee);
         etNomineeFullName = (EditText) findViewById(R.id.etNomineeFullName);
 
-        SharedPreferences preferences=getSharedPreferences(PREFS_NAME,0);
-        if (preferences.getString("id","").toString().equals("1")){
-
-//            etEmail.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-//            etMobile.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-//            etAddress.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-//            etCity.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-//            etPincode.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-//            etState.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-
-            if (etNomineeFullName.getText().toString()!=null){
-                etNomineeFullName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etNomineeFullName.setEnabled(false);
-            }
-
-            if (etRelationshipwithNominee.getText().toString()!=null){
-                etRelationshipwithNominee.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etRelationshipwithNominee.setEnabled(false);
-            }
-
-            if (etBankName.getText().toString()!=null){
-                etBankName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etBankName.setEnabled(false);
-            }
-
-            if (etAccountNo.getText().toString()!=null){
-                etAccountNo.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etAccountNo.setEnabled(false);
-            }
-
-            if (etIFSCCode.getText().toString()!=null){
-                etIFSCCode.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etIFSCCode.setEnabled(false);
-            }
-
-            if (etBranchName.getText().toString()!=null){
-                etBranchName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etBranchName.setEnabled(false);
-            }
-
-            if (etDob.getText().toString()!=null){
-                etDob.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etDob.setEnabled(false);
-            }
-
-            if (etPanNo.getText().toString()!=null){
-                etPanNo.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
-                etPanNo.setEnabled(false);
-            }
-
-
-            etDob.clearFocus();
-//            etEmail.setEnabled(false);
-//            etMobile.setEnabled(false);
-//            etAddress.setEnabled(false);
-//            etCity.setEnabled(false);
-//            etPincode.setEnabled(false);
-//            etState.setEnabled(false);
-
-        }
-
-
+        etDob.clearFocus();
+        etDob.setCursorVisible(false);
 
         Intent intent = getIntent();
         strLoginId = intent.getStringExtra("id");
@@ -170,6 +112,101 @@ public class ViewProfileActivity extends AppCompatActivity {
             new getData().execute(String.valueOf(jsonObject));
 
         }
+
+
+
+        SharedPreferences preferences=getSharedPreferences(PREFS_NAME,0);
+        if (preferences.getString("id","").toString().equals("1")){
+
+            Log.d(TAG, "preference string: "+preferences.getString("id",""));
+//            etEmail.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//            etMobile.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//            etAddress.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//            etCity.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//            etPincode.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//            etState.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+
+//            if (!etNomineeFullName.getText().toString().equals("")){
+//                etNomineeFullName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etNomineeFullName.setEnabled(false);
+//            }else {
+//                etNomineeFullName.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etNomineeFullName.setEnabled(true);
+//            }
+//
+//            if (!etRelationshipwithNominee.getText().toString().equals("")){
+//                etRelationshipwithNominee.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etRelationshipwithNominee.setEnabled(false);
+//            }else {
+//                etRelationshipwithNominee.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etRelationshipwithNominee.setEnabled(true);
+//            }
+//
+//            if (!etBankName.getText().toString().equals("")){
+//                etBankName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etBankName.setEnabled(false);
+//            }else {
+//                etBankName.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etBankName.setEnabled(true);
+//            }
+//
+//            String strAccountNo=etAccountNo.getText().toString();
+//            Log.d(TAG, "account no data: "+strAccountNo);
+//            if (!etAccountNo.getText().toString().equals("")){
+//                etAccountNo.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etAccountNo.setFocusable(false);
+//            }else {
+//                etAccountNo.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etAccountNo.setFocusable(true);
+//            }
+//
+//
+//            if (!etIFSCCode.getText().toString().equals("")){
+//                etIFSCCode.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etIFSCCode.setEnabled(false);
+//            }else {
+//                etIFSCCode.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etIFSCCode.setEnabled(true);
+//            }
+//
+//            if (!etBranchName.getText().toString().equals("")){
+//                etBranchName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etBranchName.setEnabled(false);
+//            }else {
+//                etBranchName.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etBranchName.setEnabled(true);
+//            }
+//
+//            if (!etDob.getText().toString().equals("")){
+//                etDob.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etDob.setEnabled(false);
+//            }else {
+//                etDob.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etDob.setEnabled(true);
+//            }
+//
+//            if (!etPanNo.getText().toString().equals("")){
+//                etPanNo.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+//                etPanNo.setEnabled(false);
+//            }else {
+//                etPanNo.setBackground(getResources().getDrawable(R.drawable.selected_edittext));
+//                etPanNo.setEnabled(false);
+//            }
+//
+//
+//            etDob.clearFocus();
+//            etEmail.setEnabled(false);
+//            etMobile.setEnabled(false);
+//            etAddress.setEnabled(false);
+//            etCity.setEnabled(false);
+//            etPincode.setEnabled(false);
+//            etState.setEnabled(false);
+
+        }
+
+
+
+
 
 
         btnUpadateNow.setOnClickListener(new View.OnClickListener() {
@@ -393,6 +430,35 @@ public class ViewProfileActivity extends AppCompatActivity {
                         etNomineeFullName.setText(profile.getNomineename());
                         etRelationshipwithNominee.setText(profile.getRelwithnominee());
 //                        txtTransactionPwd.setText(profile.getTransaction_password());
+
+
+
+
+                        if (!StringUtils.isBlank(profile.getBankaccountno())){
+                            etAccountNo.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+                            etAccountNo.setFocusable(false);
+                        }
+                        if (!StringUtils.isBlank(profile.getBankname())){
+                            etBankName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+                            etBankName.setFocusable(false);
+                        }
+                        if (!StringUtils.isBlank(profile.getIfsccode())){
+                            etIFSCCode.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+                            etIFSCCode.setFocusable(false);
+                        }
+                        if (!StringUtils.isBlank(profile.getBranchname())){
+                            etBranchName.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+                            etBranchName.setFocusable(false);
+                        }
+                        if (!StringUtils.isBlank(profile.getDob())){
+                            etDob.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+                            etDob.setFocusable(false);
+                        }
+
+                        if (!StringUtils.isBlank(profile.getPanno())){
+                            etPanNo.setBackground(getResources().getDrawable(R.drawable.select_fill_edit_profile));
+                            etPanNo.setFocusable(false);
+                        }
                     }
 
                 } else {
