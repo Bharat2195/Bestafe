@@ -40,8 +40,6 @@ public class ChangePasswordFragment extends Fragment {
     private static final String TAG = ChangePasswordFragment.class.getSimpleName();
     TextView txtErrorOldPassword,txtErrorConPassword, txtSignIn,txtTitle;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_change_password,container,false);

@@ -97,7 +97,8 @@
         <activity android:name=".DocumentListActivity" />
         <activity android:name=".SponsorSummaryClickActivity" />
         <activity android:name=".OrderHistoryActivity" />
-        <activity android:name=".MembeChangePasswordActivity"></activity>
+        <activity android:name=".MembeChangePasswordActivity" />
+        <activity android:name=".fragment.PaymentCodActivity"></activity>
     </application>
 
 </manifest>

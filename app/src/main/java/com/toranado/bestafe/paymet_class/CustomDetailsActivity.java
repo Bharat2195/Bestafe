@@ -64,8 +64,8 @@ public class CustomDetailsActivity extends BaseActivity {
                 if (validateDetails()) {
                     String mobile = mobileEt.getText().toString().trim();
                     String email = emailEt.getText().toString().trim();
-                    CitrusFlowManager.startShoppingFlow(CustomDetailsActivity.this, email, mobile, String.valueOf(sum), false);
-//                    CitrusFlowManager.startShoppingFlow(CustomDetailsActivity.this, email, mobile, "1", false);
+//                    CitrusFlowManager.startShoppingFlow(CustomDetailsActivity.this, email, mobile, String.valueOf(sum), false);
+                    CitrusFlowManager.startShoppingFlow(CustomDetailsActivity.this, email, mobile, "1", false);
                 }
             }
         });

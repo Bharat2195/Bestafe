@@ -12,7 +12,7 @@ public class BaseApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-        appEnvironment = AppEnvironment.PRODUCTION;
+        appEnvironment = AppEnvironment.SANDBOX;
     }
 
     public AppEnvironment getAppEnvironment() {

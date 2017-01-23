@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/mToolbarCod"
+        layout="@layout/toolbar_login_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </include>
+
+    <LinearLayout
+        android:layout_below="@+id/mToolbarCod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtCashOnDelivary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Cash on Delivery"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtPriceDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:text="PRICE DETAILS"
+                    android:textSize="16sp" />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtPriceDetails"
+                    android:background="@android:color/darker_gray"></View>
+
+
+                <TextView
+                    android:id="@+id/Price"
+                    android:layout_margin="10dp"
+                    android:text="Price"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:text="Rs. 00"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtQunty"
+                    android:layout_margin="10dp"
+                    android:text="Qunty"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtQuntyValue"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:text="00"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtDelivary"
+                    android:layout_margin="10dp"
+                    android:text="Delivery"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/txtQunty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/Delivary"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Free"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtQunty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtAmountPayable"
+                    android:layout_below="@+id/txtDelivary"
+                    android:text="Amount Payable"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtAmountPayablePrice"
+                    android:layout_below="@+id/Delivary"
+                    android:text="Rs. 00"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnOrder"
+                    android:text="Place Order"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="@color/red"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtAmountPayable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

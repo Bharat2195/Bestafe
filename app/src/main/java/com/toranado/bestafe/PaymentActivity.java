@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,9 +20,7 @@ import com.citrus.sdk.Callback;
 import com.citrus.sdk.CitrusClient;
 import com.citrus.sdk.TransactionResponse;
 import com.citrus.sdk.classes.CashoutInfo;
-import com.citrus.sdk.payment.PaymentData;
 import com.citrus.sdk.response.CitrusError;
-import com.citrus.sdk.response.CitrusResponse;
 import com.citrus.sdk.ui.activities.BaseActivity;
 import com.citrus.sdk.ui.activities.CitrusUIActivity;
 import com.citrus.sdk.ui.fragments.ResultFragment;
@@ -31,6 +28,7 @@ import com.citrus.sdk.ui.utils.CitrusFlowManager;
 import com.citrus.sdk.ui.utils.ResultModel;
 import com.crashlytics.android.Crashlytics;
 import com.orhanobut.logger.Logger;
+import com.toranado.bestafe.fragment.PaymentCodActivity;
 import com.toranado.bestafe.paymet_class.AppEnvironment;
 import com.toranado.bestafe.paymet_class.BaseApplication;
 import com.toranado.bestafe.paymet_class.CustomDetailsActivity;
@@ -50,13 +48,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+import butterknife.InjectView;
+import butterknife.OnClick;
 import io.fabric.sdk.android.Fabric;
 
 
-public class PaymentActivity extends BaseActivity implements View.OnClickListener  {
+public class PaymentActivity extends BaseActivity implements View.OnClickListener {
 
-    public static final String returnUrlLoadMoney = "https://salty-plateau-1529.herokuapp" +
-            ".com/redirectUrlLoadCash.php";
+//    public static final String returnUrlLoadMoney = "https://salty-plateau-1529.herokuapp" +
+//            ".com/redirectUrlLoadCash.php";
+
+    public static final String  returnUrlLoadMoney="bestafe.in/catalog/view/theme/kingstorepro/template/common/requestData.php";
     public static final String TAG = PaymentActivity.class.getSimpleName();
     private static final long MENU_DELAY = 300;
     public static String dummyMobile = "9769507476";
@@ -68,6 +70,8 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
     SharedPreferences.Editor editor;
     private Toolbar toolbar_payment;
     private TextView txtTitle;
+
+    private Button btnCod;
 
     public static ArrayList<String> listModelName = new ArrayList<>();
     public static ArrayList<String> listProductId = new ArrayList<>();
@@ -102,10 +106,29 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
         strTotal = intent.getStringExtra("strTotal");
         Log.d(TAG, "total price: " + strTotal);
 
+        btnCod=(Button)findViewById(R.id.btnCod);
+
+        btnCod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(PaymentActivity.this, PaymentCodActivity.class);
+                intent.putExtra("strMemberId",strMemberId);
+                intent.putStringArrayListExtra("strProductName",listModelName);
+                intent.putStringArrayListExtra("strPrice", listPrice);
+                intent.putStringArrayListExtra("strQunty", listQunty);
+                intent.putStringArrayListExtra("strProductId",listProductId);
+                intent.putStringArrayListExtra("strMpn",listMpn);
+                startActivity(intent);
+            }
+        });
+
+
+
+
         settings = getSharedPreferences("settings", MODE_PRIVATE);
 //        logoutBtn = (Button) findViewById(R.id.logout_button);
         if (settings.getBoolean("is_prod_env", false)) {
-            ((BaseApplication) getApplication()).setAppEnvironment(AppEnvironment.PRODUCTION);
+            ((BaseApplication) getApplication()).setAppEnvironment(AppEnvironment.SANDBOX);
         }
 //        else {
 //            ((BaseApplication) getApplication()).setAppEnvironment(AppEnvironment.SANDBOX);
@@ -323,6 +346,7 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
             }
         }
     }
+
 
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
